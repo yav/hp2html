@@ -1,0 +1,24 @@
+Name:           hp2html
+Version:        0.1
+Author:         Iavor S. Diatchki
+Maintainer:     iavor.diatchki@gmail.com
+Build-type:     Simple
+cabal-version:  >= 1.2
+
+data-files:
+  data/hp2html.css
+  data/hp2html.js
+  data/jquery-1.7.1.min.js
+  data/flot/jquery.flot.min.js
+  data/flot/jquery.flot.stack.min.js
+  data/flot/jquery.flot.resize.min.js
+  data/flot/jquery.flot.selection.min.js
+
+executable hp2html
+  build-depends:    base >= 4, containers, filepath
+  hs-source-dirs:   src
+  main-is:          hp2html.hs
+  GHC-options:      -O2 -Wall
+  GHC-prof-options: -auto-all
+
+

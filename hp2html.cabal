@@ -2,8 +2,13 @@ Name:           hp2html
 Version:        0.1
 Author:         Iavor S. Diatchki
 Maintainer:     iavor.diatchki@gmail.com
+License:        BSD3
+License-file:   LICENSE
 Build-type:     Simple
-cabal-version:  >= 1.2
+Synopsis:       A tool for converting GHC heap-profiles to HTML.
+Description:    A tool for converting GHC heap-profiles to HTML.
+Category:       Profiling
+cabal-version:  >= 1.6
 
 data-files:
   data/hp2html.css
@@ -20,5 +25,10 @@ executable hp2html
   main-is:          hp2html.hs
   GHC-options:      -O2 -Wall
   GHC-prof-options: -auto-all
+
+source-repository head
+  type:       git
+  location:   git://github.com/yav/hp2html.git
+
 
 

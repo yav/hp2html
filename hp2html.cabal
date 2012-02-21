@@ -20,7 +20,7 @@ data-files:
   data/flot/jquery.flot.selection.min.js
 
 executable hp2html
-  build-depends:    base >= 4, containers, filepath
+  build-depends:    base >= 4 && <= 10, containers, filepath
   hs-source-dirs:   src
   main-is:          hp2html.hs
   GHC-options:      -O2 -Wall

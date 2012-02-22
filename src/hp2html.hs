@@ -70,6 +70,7 @@ htmlWrapper dataPath jsData = unlines $
   , "                                                             checked />"
   , "    <label for='stack'>stacked</label>"
   , "    <input type='radio' name='view' id='stack' value='stack' />"
+  , "    <input type='button' value='hide legend' id='toggle_legend' />"
   , "  </span>"
   , "  <span id='point'>(hover over curves)</span>"
   , "</div>"

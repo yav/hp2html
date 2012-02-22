@@ -1,7 +1,9 @@
 $(function () {
   var xmin = null, xmax = null, ymin = null, ymax = null; // view
-  var placeholder = $("#placeholder");
+  var placeholder   = $("#placeholder");
+  var toggle_legend = $("#toggle_legend");
   var data = getData();
+  var withLegend = true;
 
   function suffixFormatter(val, axis) {
     var kb = 1024, mb = 1024 * kb;
@@ -24,7 +26,7 @@ $(function () {
                 , lines: { show: true, fill: true }
                 }
       , points: { show: usePoints }
-      , legend: { show: false }
+      , legend: { show: withLegend, noColumns: 4, position: "se" }
       , grid: { hoverable: true }
       , xaxis: { min: xmin, max: xmax }
       , yaxis: { tickFormatter: suffixFormatter, min: ymin, max: ymax }
@@ -33,6 +35,11 @@ $(function () {
     }
 
   $(".stackControls input").click(function (e) { plotWithOptions(); });
+  toggle_legend.click(function (e) {
+    withLegend = !withLegend;
+    toggle_legend.val(withLegend ? "hide legend" : "show legend");
+    plotWithOptions();
+  });
 
   placeholder
     .dblclick(function (e) {
